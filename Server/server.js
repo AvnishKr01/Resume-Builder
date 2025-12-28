@@ -12,13 +12,13 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 // connectDB();
-// app.use(cors());
-app.use(cors({
-//   origin: ["http://localhost:5173"],
-  origin: process.env.FRONTEND_URL,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true // if you’re using cookies or auth headers
-}));
+app.use(cors());
+// app.use(cors({
+// //   origin: ["http://localhost:5173"],
+//   origin: process.env.FRONTEND_URL,
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true // if you’re using cookies or auth headers
+// }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
