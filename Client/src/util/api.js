@@ -3,21 +3,21 @@ export const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 export const AUTH_PATHS = {
     AUTH:{
-        LOGIN:"/user/login",
-        REGISTER:"/user/register",
-        GETUSER:"/user/getprofile"
+        LOGIN:"/api/user/login",
+        REGISTER:"/api/user/register",
+        GETUSER:"/api/user/getprofile"
     },
     RESUME:{
-        CREATE_RESUME:"/resume/",
-        GET_ALL_RESUMES:"/resume/",
-        GET_BY_ID:(id) => `/resume/${id}`,
+        CREATE_RESUME:"/api/resume/",
+        GET_ALL_RESUMES:"/api/resume/",
+        GET_BY_ID:(id) => `/api/resume/${id}`,
 
-        DELETE:(id) => `/resume/${id}`,
-        UPDATE:(id) => `/resume/${id}`,
-        UPLOAD_IMAGES: (id) => `/resume/${id}/upload-image`,
+        DELETE:(id) => `/api/resume/${id}`,
+        UPDATE:(id) => `/api/resume/${id}`,
+        UPLOAD_IMAGES: (id) => `/api/resume/${id}/upload-image`,
 
     },
     IMAGE:{
-        UPLOAD_IMAGE:`/auth/upload-images`,
+        UPLOAD_IMAGE:`/api/auth/upload-images`,
     }
 }
